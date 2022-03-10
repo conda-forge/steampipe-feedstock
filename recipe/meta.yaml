@@ -1,5 +1,5 @@
 {% set name = "steampipe" %}
-{% set version = "0.12.2" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 5d590a5bf65b47d6c63b132fe1e1c8d193237a6bd822b4b1f3c8e5527899b353
+  sha256: d30e476534d22826412d2c3fdd2045aa83ed1248e92de43607673e09729b3bbd
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -34,8 +34,8 @@ about:
     - license-files/
   summary: Use SQL to instantly query your cloud services.
   description: |
-     Use SQL to instantly query your cloud services (AWS, Azure, GCP and more).
-     Open source CLI. No DB required.
+    Use SQL to instantly query your cloud services (AWS, Azure, GCP and more).
+    Open source CLI. No DB required.
   doc_url: https://steampipe.io/docs
   dev_url: https://github.com/turbot/steampipe
 
