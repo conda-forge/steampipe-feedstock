@@ -1,5 +1,5 @@
 {% set name = "steampipe" %}
-{% set version = "0.13.6" %}
+{% set version = "0.14.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 06e76b204bc25207d6aeb2dd5c18c0ccbf4919551717e8416bc77d0b22a68c23
+  sha256: 7098cbe1cdaa8496605d5e38c44d9ee9699a6a8db2cbccf98ef9dc3bc22ebc4c
 
 build:
   number: 0
@@ -15,8 +15,8 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }} 1.17
-    - go-licenses >=0.0.44
+    - {{ compiler('go') }} 1.18
+    - go-licenses >=1.0.0
     - make
 
 test:
