@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 17a1e84952825753b3f4b66319fdc28577b8d34ea830b32a5830e380abba0cce
+  sha256: 56745e5ec0a53f6a5c54531c5ee61528feb75da9b986c17cba9367d4d92b5b58
 
 build:
   number: 0
