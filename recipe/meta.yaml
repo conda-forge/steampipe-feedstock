@@ -1,5 +1,5 @@
 {% set name = "steampipe" %}
-{% set version = "0.20.6" %}
+{% set version = "0.20.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 50038a3dac08577fa578c82c2d5ac9f1cb151c393a3146daae47c968b13723a0
+  sha256: c7946e08ecf04b0b993f905c3c4a6899d0c02697d46a6a8534386d48f9445049
 
 build:
   number: 0
