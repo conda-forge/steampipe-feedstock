@@ -1,0 +1,16 @@
+diff --git a/pkg/db/db_local/running_info.go b/pkg/db/db_local/running_info.go
+index 34534b14..e7935d37 100644
+--- a/pkg/db/db_local/running_info.go
++++ b/pkg/db/db_local/running_info.go
+@@ -6,9 +6,10 @@ import (
+ 	"log"
+ 	"os"
+ 	"os/exec"
+-	"slices"
+ 	"sort"
+ 
++	"golang.org/x/exp/slices"
++
+ 	filehelpers "github.com/turbot/go-kit/files"
+ 	"github.com/turbot/go-kit/helpers"
+ 	"github.com/turbot/steampipe/pkg/constants"
