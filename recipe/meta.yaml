@@ -8,6 +8,9 @@ package:
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
   sha256: 749d5ee59a8e07aae85c59fc45fd51f8549c49e2608221a3dba1ce576647bdb7
+  patches:
+    # Backwards compatibility with go 1.20 until go 1.21 is available in conda-forge
+    - 0001-go-120.patch
 
 build:
   number: 0
@@ -15,7 +18,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }} 1.19
+    - {{ compiler('go') }} 1.20
     - file
     - go-licenses >=1.0.0
     - make
