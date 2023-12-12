@@ -1,5 +1,5 @@
 {% set name = "steampipe" %}
-{% set version = "0.21.1" %}
+{% set version = "0.21.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 749d5ee59a8e07aae85c59fc45fd51f8549c49e2608221a3dba1ce576647bdb7
+  sha256: 16aa02e84fdd5d6f8e13ee36730e2c412e21c12139cc7a9245267f433c4851db
   patches:
     # Backwards compatibility with go 1.20 until go 1.21 is available in conda-forge
     - 0001-go-120.patch
