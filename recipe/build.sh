@@ -1,6 +1,9 @@
 #!/bin/sh
 set -eux
 
+# Use installed Go, don't download newer versions
+export GOTOOLCHAIN=local
+
 make OUTPUT_DIR="$PREFIX/bin" steampipe
 
 # Cross-compilation: check correct architecture was built
