@@ -1,0 +1,15 @@
+--- Makefile.orig	2025-10-31 19:53:57.352721371 +0000
++++ Makefile	2025-10-31 19:59:28.031868417 +0000
+@@ -1,10 +1,10 @@
+ OUTPUT_DIR?=/usr/local/bin
++VERSION := ${PKG_VERSION}-${PKG_BUILDNUM}
+ 
+ build:
+ 	$(eval TIMESTAMP := $(shell date +%Y%m%d%H%M%S))
+-	$(eval GIT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD | sed 's/[\/_]/-/g' | sed 's/[^a-zA-Z0-9.-]//g'))
+ 
+-	go build -o $(OUTPUT_DIR) -ldflags "-X main.version=0.0.0-dev-$(GIT_BRANCH).$(TIMESTAMP)" .
++	go build -o $(OUTPUT_DIR) -ldflags "-X main.version=$(VERSION).$(TIMESTAMP)" .
+ 
+ all:
+ 	$(MAKE) -C pkg/pluginmanager_service

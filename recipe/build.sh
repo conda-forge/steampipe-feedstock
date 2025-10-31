@@ -3,8 +3,9 @@ set -eux
 
 # Use installed Go, don't download newer versions
 export GOTOOLCHAIN=local
-
-make OUTPUT_DIR="$PREFIX/bin" steampipe
+export OUTPUT_DIR="$PREFIX/bin"
+mkdir -p "$OUTPUT_DIR"
+make build
 
 # Cross-compilation: check correct architecture was built
 if [ -n "$GOARCH" ]; then
