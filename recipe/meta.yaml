@@ -17,7 +17,7 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go') }} >=1.25
+    - {{ compiler('go') }} >=1.26
     - file
     - go-licenses >=1.0.0
     - make
