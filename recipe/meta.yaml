@@ -1,5 +1,5 @@
 {% set name = "steampipe" %}
-{% set version = "2.4.2" %}
+{% set version = "2.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/turbot/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 055ad42e472c50ab09674c0d6e37e71b526578651d775d13ecd9bf27d1ddfa6a
+  sha256: 0fb7cacbd6487667fa7ebd590fa110c2e7364ed6323ae1c619415915f9685025
   patches:
     - makefile-2.3.1.patch
 
